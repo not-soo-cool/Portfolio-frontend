@@ -6,7 +6,7 @@ const About = ({ about }) => {
   return (
     <div className="about">
       <div className="aboutContainer">
-        <Typography>{about.quote}</Typography>
+        <Typography>{about && about.quote}</Typography>
         {/* <Typography>Sample Quote</Typography> */}
       </div>
       <div className="aboutContainer2">
@@ -18,15 +18,15 @@ const About = ({ about }) => {
             variant="h4"
             style={{ margin: "1vmax 0", color: "black" }}
           >
-            {about.name}
+            {about && about.name}
             {/* Yashvendra */}
           </Typography>
 
-          <Typography>{about.title}</Typography>
+          <Typography>{about && about.title}</Typography>
           {/* <Typography>Software Developer</Typography> */}
 
           <Typography style={{ margin: "1vmax 0", textAlign: "center" }}>
-            {about.subtitle}
+            {about && about.subtitle}
             {/* MERN Stack */}
           </Typography>
         </div>
@@ -40,7 +40,7 @@ const About = ({ about }) => {
               textAlign: "right",
             }}
           >
-            {about.description}
+            {about && about.description}
             {/* I am a working professional, working with something right now and depressed as hell */}
           </Typography>
         </div>
